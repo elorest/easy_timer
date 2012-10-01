@@ -17,24 +17,24 @@ Or install it yourself as:
     $ gem install easy_timer
 
 ## Usage
-Calling timer will return a time object.
+  Calling timer will return a time object.
 		
-	$ Time.timer{sleep 1} #=> Time object
+	  Time.timer{sleep 1} #=> Time object
 
-Calling verbose on a Time object will return a formatted string.
+  Calling verbose on a Time object will return a formatted string.
 		
-	$ Time.timer{sleep 1}.verbose #=> 1.00 seconds
+    Time.timer{sleep 1}.verbose #=> 1.00 seconds
 
-You can also pass :v => true or :verbose => true.
+  You can also pass :v => true or :verbose => true.
 		
-	$ Time.timer(:v => true){sleep 1} #=> 1.00 seconds
+	  Time.timer(:v => true){sleep 1} #=> 1.00 seconds
 
-A practical usage would be:
+  A practical usage would be:
 
-	$ puts Time.timer do
-	$   Model.update_all({:criteria => false}, {:criteria => true})
-	$   puts "All models with criteria=false have been updated."
-	$ end.verbose
+		puts Time.timer do
+			Model.update_all({:criteria => false}, {:criteria => true})
+			puts "All models with criteria=false have been updated."
+		end.verbose
 
 
 ## Contributing
