@@ -17,9 +17,9 @@ Or install it yourself as:
     $ gem install easy_timer
 
 ## Usage
-  Calling timer will return a time object.
+Calling timer will return a time object.
 		
-	  Time.timer{sleep 1} #=> Time object
+	Time.timer{sleep 1} #=> Time object
 
   Calling verbose on a Time object will return a formatted string.
 		
