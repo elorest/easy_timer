@@ -1,6 +1,6 @@
 # EasyTimer
 
-A simple and elegant way to add timer functionality to your projects. Adds class method timer and instance method verbose to Time class.
+A simple and elegant way to add timer functionality to your projects. Adds class method :timer and instance method :verbose to Time class.
 
 ## Installation
 
