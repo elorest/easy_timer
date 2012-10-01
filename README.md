@@ -23,7 +23,7 @@ Calling timer will return a time object.
 
 Calling verbose on a Time object will return a formatted string.
 		
-  Time.timer{sleep 1}.verbose #=> 1.00 seconds
+	Time.timer{sleep 1}.verbose #=> 1.00 seconds
 
 You can also pass :v => true or :verbose => true.
 		
