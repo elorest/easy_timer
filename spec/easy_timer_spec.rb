@@ -16,12 +16,15 @@ describe "timer instance" do
 end
 
 describe "Timer" do
-	let(:five){Time.timer{sleep 5}}
+	before :all do
+		@five = Time.timer{sleep 5}
+	end
+
 	it "should return a Time object" do
-		expect(five.class).to eql Time
+		expect(@five.class).to eql Time
 	end
 
 	it "should return 5 seconds" do
-		expect(five.to_f).to be_within(0.1).of(5)
+		expect(@five.to_f).to be_within(0.1).of(5)
 	end
 end
