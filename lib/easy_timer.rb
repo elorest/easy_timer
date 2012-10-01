@@ -29,7 +29,7 @@ module EasyTimer
     time_hash[:seconds] = seconds + milliseconds
     return time_hash.select{|k,v| v > 0}.inject([]){|verbose, array|
       k, v = array
-      verbose << "#{v.is_a?(Float) ? sprintf("%.2f", v) : v} #{k}"
+      verbose << "#{v.is_a?(Float) ? sprintf("%.2f", v) : v} #{v > 1 ? k : k.to_s.chars.to_a[0..-2].join}"
     }.join(" ")
   end
 end

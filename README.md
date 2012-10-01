@@ -24,8 +24,8 @@ Calling timer will return a time object.
 Calling verbose on a Time instance will return a formatted string.
 		
     Time.timer{sleep 1}.verbose #=> 1.00 seconds
-    Time.at(1.weeks + 1.days + 1.hours + 1.minutes + 1.11.seconds) #=> "1 weeks 1 days 1 hours 1 minutes 1.11 seconds"
-    Time.at(694861.11) #=> "1 weeks 1 days 1 hours 1 minutes 1.11 seconds"
+    Time.at(2.weeks + 2.days + 2.hours + 2.minutes + 2.22.seconds) #=> "2 weeks 2 days 2 hours 2 minutes 2.22 seconds"
+    Time.at(694861.11) #=> "1 week 1 day 1 hour 1 minute 1.11 seconds"
 
 You can also pass :v => true or :verbose => true.
 		

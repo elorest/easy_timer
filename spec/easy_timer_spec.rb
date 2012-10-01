@@ -6,8 +6,12 @@ describe "timer instance" do
 		expect(verbose_time.class).to eql String
 	end
 
-	it "should be a verbose time" do
-		expect(verbose_time).to eql "1 weeks 1 days 1 hours 1 minutes 1.11 seconds"
+	it "should be a singular verbose time" do
+		expect(verbose_time).to eql "1 week 1 day 1 hour 1 minute 1.11 seconds"
+	end
+
+	it "shold be a plural verbose time" do
+		expect(Time.at(1389722.22).verbose).to eql "2 weeks 2 days 2 hours 2 minutes 2.22 seconds"	
 	end
 
 	it "should show 1 seconds" do
