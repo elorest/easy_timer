@@ -31,10 +31,10 @@ You can also pass :v => true or :verbose => true.
 
 A practical usage would be:
 
-	$	puts Time.timer do
-	$		Model.update_all({:criteria => false}, {:criteria => true})
-	$		puts "All models with criteria=false have been updated."
-	$	end.verbose
+	$ puts Time.timer do
+	$   Model.update_all({:criteria => false}, {:criteria => true})
+	$   puts "All models with criteria=false have been updated."
+	$ end.verbose
 
 
 ## Contributing
