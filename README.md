@@ -29,6 +29,12 @@ You can also pass :v => true or :verbose => true.
 		
 	$ Time.timer(:v => true){sleep 1} #=> 1.00 seconds
 
+A practical usage would be:
+
+	$	puts Time.timer do
+			Model.update_all({:criteria => false}, {:criteria => true})
+		end.verbose
+
 
 ## Contributing
 
