@@ -14,8 +14,8 @@ describe "timer instance" do
 		expect(Time.at(1389722.22).verbose).to eql "2 weeks 2 days 2 hours 2 minutes 2.22 seconds"	
 	end
 
-	it "should show 1 seconds" do
-		expect(Time.timer{sleep 1}.verbose).to eql "1.00 seconds"
+	it "should show 0.55 seconds" do
+		expect(Time.timer{sleep 0.55}.verbose).to eql "0.55 seconds"
 	end
 end
 

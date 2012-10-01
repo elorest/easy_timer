@@ -22,14 +22,14 @@ module EasyTimer
     time_hash = {}
     seconds = self.to_i
     milliseconds = (self.to_f - seconds)
-    time_hash[:weeks], seconds = seconds.divmod(604800)
-    time_hash[:days], seconds = seconds.divmod(86400)
-    time_hash[:hours], seconds = seconds.divmod(3600)
-    time_hash[:minutes], seconds = seconds.divmod(60)
-    time_hash[:seconds] = seconds + milliseconds
+    time_hash[:week], seconds = seconds.divmod(604800)
+    time_hash[:day], seconds = seconds.divmod(86400)
+    time_hash[:hour], seconds = seconds.divmod(3600)
+    time_hash[:minute], seconds = seconds.divmod(60)
+    time_hash[:second] = seconds + milliseconds
     return time_hash.select{|k,v| v > 0}.inject([]){|verbose, array|
       k, v = array
-      verbose << "#{v.is_a?(Float) ? sprintf("%.2f", v) : v} #{v > 1 ? k : k.to_s.chars.to_a[0..-2].join}"
+      verbose << "#{v.is_a?(Float) ? sprintf("%.2f", v) : v} #{k.to_s + (v == 1 ? '' : 's')}"
     }.join(" ")
   end
 end
