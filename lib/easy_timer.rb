@@ -23,7 +23,7 @@ module EasyTimer
     seconds = self.to_i
 
     precision = case seconds
-    when 0..30 then 5
+    when 0..30 then 3
     when 31..360 then 2
     else 0
     end
