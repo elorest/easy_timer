@@ -7,15 +7,11 @@ describe "timer instance" do
 	end
 
 	it "should be a singular verbose time" do
-		expect(verbose_time).to eql "1 week 1 day 1 hour 1 minute 1.11 seconds"
+		expect(verbose_time).to eql "1 week 1 day 1 hour 1 minute 1 second"
 	end
 
 	it "shold be a plural verbose time" do
-		expect(Time.at(1389722.22).verbose).to eql "2 weeks 2 days 2 hours 2 minutes 2.22 seconds"	
-	end
-
-	it "should show 0.55 seconds" do
-		expect(Time.timer{sleep 0.55}.verbose).to eql "0.55 seconds"
+		expect(Time.at(1389722.22).verbose).to eql "2 weeks 2 days 2 hours 2 minutes 2 seconds"
 	end
 end
 
