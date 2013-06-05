@@ -29,14 +29,13 @@ end
 
 describe "Timer" do
   before :all do
-    @five = Time.timer{sleep 2}
+    @two = Time.timer{sleep 2}
   end
 
   it "should return a Time object" do
-    (@five.class).should eql Time
-  end
+    (@two.class).should eql Time
 
   it "should return 2 seconds" do
-    (@five.to_f).should be_within(0.1).of(2)
+    (@two.to_f).should be_within(0.1).of(2)
   end
 end
